@@ -298,7 +298,7 @@ chmod +x "$INSTALL_DIR/copilot_complete"
 # Add installation directory to PATH if not already present
 if [[ ":$PATH:" != *":$INSTALL_DIR:"* ]]; then
     echo "Adding $INSTALL_DIR to PATH in .bashrc..."
-    echo "export PATH=\"\$PATH:$INSTALL_DIR\"" >> "$HOME/.bashrc"
+    echo -e "\nexport PATH=\"\$PATH:$INSTALL_DIR\"" >> "$HOME/.bashrc"
     echo "Please restart your terminal or run 'source ~/.bashrc' to update your PATH."
 fi
 
